@@ -41,7 +41,11 @@ class _FormCustomLoginState extends State<FormCustomLogin> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text('Esqueceu o usuário?'),
+                  Text(
+                    'Esqueceu o usuário?',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
               Expanded(
@@ -58,7 +62,9 @@ class _FormCustomLoginState extends State<FormCustomLogin> {
                       ),
                       hintText: 'Password',
                       hintStyle: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                       prefixIcon: Icon(
                         Icons.lock,
                         size: 24,
@@ -69,7 +75,11 @@ class _FormCustomLoginState extends State<FormCustomLogin> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text('Esqueceu a senha?'),
+                  Text(
+                    'Esqueceu a senha?',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
             ],
