@@ -1,5 +1,5 @@
-import 'package:app_sintec/app/shared/utils/color.dart';
-import 'package:app_sintec/app/shared/utils/methods.dart';
+import 'package:app_sintec/app/modules/home/widgets/slides.dart';
+import 'package:app_sintec/app/shared/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'home_controller.dart';
@@ -20,14 +20,13 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-        seconds: 4,
-        gradientBackground: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Colors.purple, Colors.white]),
-        navigateAfterSeconds: HomeScreen(),
+        seconds: 1,
+        gradientBackground: customTheme(),
+        navigateAfterSeconds: IntroSlides(),
         loaderColor: Color(0xff7159c1),
-        image: Image.asset('assets/icons/company.png'));
+        image: Image.asset(
+          'assets/icons/drone.png',
+        ));
   }
 }
 
