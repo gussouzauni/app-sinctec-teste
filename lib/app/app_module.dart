@@ -1,3 +1,4 @@
+import 'package:app_sintec/app/modules/history/history_module.dart';
 import 'package:app_sintec/app/modules/login/login_module.dart';
 
 import 'app_controller.dart';
@@ -16,6 +17,7 @@ class AppModule extends MainModule {
   List<Router> get routers => [
         Router(Modular.initialRoute, module: HomeModule()),
         Router('/login', module: LoginModule()),
+        Router('/history', module: HistoryModule()),
       ];
 
   @override

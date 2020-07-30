@@ -22,10 +22,9 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: GestureDetector(
-        onTap: () {
-          print('click');
-        },
+        onTap: () => Modular.to.pushNamed('history'),
         child: Container(
+          width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(gradient: customTheme()),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
