@@ -1,5 +1,6 @@
 import 'package:app_sintec/app/modules/history/history_module.dart';
 import 'package:app_sintec/app/modules/login/login_module.dart';
+import 'package:app_sintec/app/modules/profile/profile_module.dart';
 
 import 'app_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -18,6 +19,7 @@ class AppModule extends MainModule {
         Router(Modular.initialRoute, module: HomeModule()),
         Router('/login', module: LoginModule()),
         Router('/history', module: HistoryModule()),
+        Router('/profile', module: ProfileModule())
       ];
 
   @override

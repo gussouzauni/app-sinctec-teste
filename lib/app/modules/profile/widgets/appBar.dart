@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class BottomNavigatorBarCustom extends StatelessWidget {
+class AppBarCustomProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();
