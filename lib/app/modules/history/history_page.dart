@@ -14,8 +14,17 @@ class HistoryPage extends StatefulWidget {
   _HistoryPageState createState() => _HistoryPageState();
 }
 
-class _HistoryPageState extends ModularState<HistoryPage, HistoryController> {
+class _HistoryPageState extends ModularState<HistoryPage, HistoryController>
+    with TickerProviderStateMixin {
   //use 'controller' variable to access controller
+
+  TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(vsync: this, length: 2);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +41,6 @@ class _HistoryPageState extends ModularState<HistoryPage, HistoryController> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                color: Colors.amber,
                 height: _screenHeight / 1.0,
                 child: Stack(
                   overflow: Overflow.visible,
@@ -42,17 +50,51 @@ class _HistoryPageState extends ModularState<HistoryPage, HistoryController> {
                       child: CustomAppBar(),
                     ),
                     Positioned(
+                      top: _screenHeight * .130,
+                      left: _screenWidth * .25,
+                      child: TabBar(
+                        labelColor: Colors.white,
+                        isScrollable: true,
+                        controller: _tabController,
+                        tabs: <Widget>[
+                          Tab(
+                            text: 'Pendentes',
+                          ),
+                          Tab(
+                            text: 'Realizadas',
+                          ),
+                        ],
+                      ),
+                    ),
+                    Positioned(
                       top: _screenHeight * .22,
                       left: 10,
                       right: 10,
                       child: SearchCustom(),
                     ),
                     Positioned(
-                        top: _screenHeight * .30,
-                        left: 0.0,
-                        right: 0.0,
-                        bottom: 0.0,
-                        child: ListViewCustom())
+                      top: _screenHeight * .30,
+                      left: 0,
+                      right: 0,
+                      child: SizedBox(
+                        height: _screenHeight,
+                        child: TabBarView(
+                          controller: _tabController,
+                          children: <Widget>[
+                            Container(
+                              width: 100,
+                              height: 100,
+                              color: Colors.purple,
+                            ),
+                            Container(
+                              width: 100,
+                              height: 100,
+                              color: Colors.amber,
+                            )
+                          ],
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),

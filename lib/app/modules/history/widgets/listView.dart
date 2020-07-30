@@ -14,11 +14,75 @@ class _ListViewCustomState extends State<ListViewCustom> {
         physics: ClampingScrollPhysics(),
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
-        itemCount: 30,
+        itemCount: 5,
         itemBuilder: (BuildContext context, int index) {
-          return Container(
-            width: 100,
-            child: Card(elevation: 10, child: Icon(Icons.card_giftcard)),
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                padding: EdgeInsets.all(10.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      children: [
+                        Icon(
+                          Icons.shopping_basket,
+                          size: 40,
+                          color: Colors.white,
+                        ),
+                        Icon(
+                          Icons.more_vert,
+                          color: Colors.white,
+                        ),
+                        Icon(
+                          Icons.more_vert,
+                          color: Colors.white,
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          'APPLE',
+                          style: TextStyle(
+                              color: Colors.purple,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          'Coleta',
+                          style: TextStyle(color: Colors.black, fontSize: 20),
+                        ),
+                        Text(
+                          'Limão - SP',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('8:00'),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      size: 20,
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
+              ),
+            ],
           );
         },
       ),
