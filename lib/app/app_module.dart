@@ -1,5 +1,6 @@
 import 'package:app_sintec/app/modules/history/history_module.dart';
 import 'package:app_sintec/app/modules/login/login_module.dart';
+import 'package:app_sintec/app/modules/profile/profile_controller.dart';
 import 'package:app_sintec/app/modules/profile/profile_module.dart';
 
 import 'app_controller.dart';
@@ -10,9 +11,8 @@ import 'package:app_sintec/app/modules/home/home_module.dart';
 
 class AppModule extends MainModule {
   @override
-  List<Bind> get binds => [
-        Bind((i) => AppController()),
-      ];
+  List<Bind> get binds =>
+      [Bind((i) => AppController()), Bind((i) => ProfileController())];
 
   @override
   List<Router> get routers => [

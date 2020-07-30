@@ -33,6 +33,7 @@ flutter:
     - assets/icons/mobile_life.svg
     - assets/icons/company.jpg
     - assets/icons/drone.png
+    - assets/icons/photo.png
 vars:
   clean: flutter clean
   get: flutter pub get

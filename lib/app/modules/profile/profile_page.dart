@@ -1,10 +1,10 @@
+import 'package:app_sintec/app/modules/profile/widgets/customBarProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'profile_controller.dart';
 
 class ProfilePage extends StatefulWidget {
-  final String title;
-  const ProfilePage({Key key, this.title = "Profile"}) : super(key: key);
+  const ProfilePage({Key key}) : super(key: key);
 
   @override
   _ProfilePageState createState() => _ProfilePageState();
@@ -16,11 +16,10 @@ class _ProfilePageState extends ModularState<ProfilePage, ProfileController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Column(
-        children: <Widget>[],
+      body: Container(
+        child: Column(
+          children: [AppBarCustomProfile()],
+        ),
       ),
     );
   }

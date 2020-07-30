@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppBarCustomProfile extends StatelessWidget {
+class ListViewCustomProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();

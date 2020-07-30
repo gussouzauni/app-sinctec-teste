@@ -1,6 +1,5 @@
 import 'profile_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:dio/dio.dart';
 import 'profile_page.dart';
 
 class ProfileModule extends ChildModule {

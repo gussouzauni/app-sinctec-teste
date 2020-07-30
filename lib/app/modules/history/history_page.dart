@@ -1,6 +1,8 @@
 import 'package:app_sintec/app/modules/history/widgets/customBar.dart';
 import 'package:app_sintec/app/modules/history/widgets/listView.dart';
 import 'package:app_sintec/app/modules/history/widgets/search.dart';
+
+import 'package:app_sintec/app/modules/profile/profile_page.dart';
 import 'package:app_sintec/app/shared/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -49,76 +51,72 @@ class _HistoryPageState extends ModularState<HistoryPage, HistoryController>
           });
         },
         children: [
-          SingleChildScrollView(
+          Container(
+            width: _screenWidth,
+            height: _screenHeight,
+            decoration: BoxDecoration(gradient: customTheme()),
             child: Container(
-              width: _screenWidth,
-              height: _screenHeight,
-              decoration: BoxDecoration(gradient: customTheme()),
-              child: Container(
-                height: _screenHeight / 1.0,
-                child: Stack(
-                  overflow: Overflow.visible,
-                  children: [
-                    Positioned(
-                      top: 0,
-                      child: CustomAppBar(),
+              height: _screenHeight / 1.0,
+              child: Stack(
+                overflow: Overflow.visible,
+                children: [
+                  Positioned(
+                    top: 0,
+                    child: CustomAppBar(),
+                  ),
+                  Positioned(
+                    top: _screenHeight * .110,
+                    left: _screenWidth * .25,
+                    child: TabBar(
+                      labelColor: Colors.white,
+                      isScrollable: true,
+                      controller: _tabController,
+                      tabs: <Widget>[
+                        Tab(
+                          text: 'Pendentes',
+                        ),
+                        Tab(
+                          text: 'Realizadas',
+                        ),
+                      ],
                     ),
-                    Positioned(
-                      top: _screenHeight * .110,
-                      left: _screenWidth * .25,
-                      child: TabBar(
-                        labelColor: Colors.white,
-                        isScrollable: true,
+                  ),
+                  Positioned(
+                    top: _screenHeight * .22,
+                    left: 10,
+                    right: 10,
+                    child: SearchCustom(),
+                  ),
+                  Positioned(
+                    top: _screenHeight * .30,
+                    left: 0,
+                    right: 0,
+                    child: SizedBox(
+                      height: _screenHeight,
+                      child: TabBarView(
                         controller: _tabController,
-                        tabs: <Widget>[
-                          Tab(
-                            text: 'Pendentes',
-                          ),
-                          Tab(
-                            text: 'Realizadas',
-                          ),
+                        children: <Widget>[
+                          ListViewCustom(),
+                          Container(
+                            width: _screenWidth,
+                            height: _screenHeight,
+                            color: Colors.blueAccent,
+                          )
                         ],
                       ),
                     ),
-                    Positioned(
-                      top: _screenHeight * .22,
-                      left: 10,
-                      right: 10,
-                      child: SearchCustom(),
-                    ),
-                    Positioned(
-                      top: _screenHeight * .30,
-                      left: 0,
-                      right: 0,
-                      child: SizedBox(
-                        height: _screenHeight,
-                        child: TabBarView(
-                          controller: _tabController,
-                          children: <Widget>[
-                            ListViewCustom(),
-                            Container(
-                              width: _screenWidth,
-                              height: _screenHeight,
-                              color: Colors.blueAccent,
-                            )
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
+                  )
+                ],
               ),
             ),
-          ),
-          Container(
-            color: Colors.amber,
           ),
           Container(
             color: Colors.purple,
           ),
           Container(
-            color: Colors.deepOrange,
-          )
+            color: Colors.orange,
+          ),
+          ProfilePage()
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
