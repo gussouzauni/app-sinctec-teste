@@ -9,12 +9,11 @@ class _ListViewCustomState extends State<ListViewCustom> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100,
       child: ListView.builder(
         physics: ClampingScrollPhysics(),
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
-        itemCount: 5,
+        itemCount: 10,
         itemBuilder: (BuildContext context, int index) {
           return Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

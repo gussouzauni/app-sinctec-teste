@@ -15,7 +15,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
           borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(30),
               bottomRight: Radius.circular(30))),
-      height: 150,
+      height: 130,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
