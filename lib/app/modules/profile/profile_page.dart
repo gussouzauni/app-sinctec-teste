@@ -1,4 +1,5 @@
 import 'package:app_sintec/app/modules/profile/widgets/customBarProfile.dart';
+import 'package:app_sintec/app/modules/profile/widgets/listViewConsultation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'profile_controller.dart';
@@ -18,7 +19,10 @@ class _ProfilePageState extends ModularState<ProfilePage, ProfileController> {
     return Scaffold(
       body: Container(
         child: Column(
-          children: [AppBarCustomProfile()],
+          children: [
+            AppBarCustomProfile(),
+            ListViewCustomProfile(),
+          ],
         ),
       ),
     );
