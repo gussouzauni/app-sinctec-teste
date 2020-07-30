@@ -4,6 +4,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
           color: Colors.blueAccent,
           borderRadius: BorderRadius.only(
