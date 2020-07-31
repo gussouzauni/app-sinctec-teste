@@ -1,3 +1,4 @@
+import 'package:app_sintec/app/shared/utils/theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatefulWidget {
@@ -11,7 +12,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
     return Container(
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-          color: Colors.blueAccent,
+          gradient: customTheme(),
           borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(30),
               bottomRight: Radius.circular(30))),

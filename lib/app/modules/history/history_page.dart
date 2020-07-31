@@ -1,4 +1,5 @@
 import 'package:app_sintec/app/modules/history/widgets/customBar.dart';
+import 'package:app_sintec/app/modules/history/widgets/detailsHistory/detailsHistory.dart';
 import 'package:app_sintec/app/modules/history/widgets/listView.dart';
 import 'package:app_sintec/app/modules/history/widgets/search.dart';
 
@@ -69,6 +70,7 @@ class _HistoryPageState extends ModularState<HistoryPage, HistoryController>
                     left: _screenWidth * .25,
                     child: TabBar(
                       labelColor: Colors.white,
+                      indicatorColor: Colors.white,
                       isScrollable: true,
                       controller: _tabController,
                       tabs: <Widget>[
@@ -100,7 +102,7 @@ class _HistoryPageState extends ModularState<HistoryPage, HistoryController>
                           Container(
                             width: _screenWidth,
                             height: _screenHeight,
-                            color: Colors.blueAccent,
+                            color: Colors.purple,
                           )
                         ],
                       ),
@@ -110,9 +112,7 @@ class _HistoryPageState extends ModularState<HistoryPage, HistoryController>
               ),
             ),
           ),
-          Container(
-            color: Colors.purple,
-          ),
+          DetailsHistory(),
           Container(
             color: Colors.orange,
           ),

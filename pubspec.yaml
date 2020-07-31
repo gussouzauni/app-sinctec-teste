@@ -36,6 +36,7 @@ flutter:
     - assets/icons/company.jpg
     - assets/icons/drone.png
     - assets/icons/photo.png
+    - assets/icons/maps.jpg
 vars:
   clean: flutter clean
   get: flutter pub get

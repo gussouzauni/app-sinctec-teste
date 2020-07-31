@@ -19,7 +19,7 @@ class _ListViewCustomState extends State<ListViewCustom> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.all(10.0),
+                margin: EdgeInsets.only(bottom: 5.0, left: 10),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -28,15 +28,15 @@ class _ListViewCustomState extends State<ListViewCustom> {
                         Icon(
                           Icons.shopping_basket,
                           size: 40,
-                          color: Colors.white,
+                          color: Colors.purple,
                         ),
                         Icon(
                           Icons.more_vert,
-                          color: Colors.white,
+                          color: Colors.purple,
                         ),
                         Icon(
                           Icons.more_vert,
-                          color: Colors.white,
+                          color: Colors.purple,
                         )
                       ],
                     ),
@@ -55,7 +55,7 @@ class _ListViewCustomState extends State<ListViewCustom> {
                         ),
                         Text(
                           'Coleta',
-                          style: TextStyle(color: Colors.black, fontSize: 20),
+                          style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
                         Text(
                           'Limão - SP',
@@ -72,11 +72,17 @@ class _ListViewCustomState extends State<ListViewCustom> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('8:00'),
+                    Text(
+                      '8:00',
+                      style: TextStyle(color: Colors.white, fontSize: 14),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Icon(
                       Icons.arrow_forward_ios,
                       size: 20,
-                      color: Colors.grey,
+                      color: Colors.white,
                     ),
                   ],
                 ),

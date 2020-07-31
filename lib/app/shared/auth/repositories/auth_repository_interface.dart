@@ -4,4 +4,5 @@ abstract class IAuthRepository {
   Future getFacebookLogin();
   Future<String> getEmailPasswordLogin(String email, String password);
   Future<String> getToken();
+  Future signOut();
 }

@@ -21,37 +21,34 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: GestureDetector(
-        onTap: () => Modular.to.pushNamed('history'),
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(gradient: customTheme()),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              HeaderCustomLogin(),
-              FormCustomLogin(),
-              ButtonLogin(),
-              SizedBox(
-                height: 20,
-              ),
-              RichText(
-                text: TextSpan(children: <TextSpan>[
-                  TextSpan(
-                      text: 'Novo no SincLog? ',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey[600],
-                      )),
-                  TextSpan(
-                      text: 'Cadastra-se já!',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
-                ]),
-              )
-            ],
-          ),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(gradient: customTheme()),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            HeaderCustomLogin(),
+            FormCustomLogin(),
+            ButtonLogin(),
+            SizedBox(
+              height: 20,
+            ),
+            RichText(
+              text: TextSpan(children: <TextSpan>[
+                TextSpan(
+                    text: 'Novo no SincLog? ',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[600],
+                    )),
+                TextSpan(
+                    text: 'Cadastra-se já!',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold)),
+              ]),
+            )
+          ],
         ),
       ),
     );
