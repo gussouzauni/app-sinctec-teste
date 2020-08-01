@@ -11,6 +11,7 @@ class DetailsHistory extends StatelessWidget {
     return Scaffold(
       body: Container(
         height: _height,
+        width: _width,
         child: Stack(
           children: [
             Positioned(
@@ -24,13 +25,7 @@ class DetailsHistory extends StatelessWidget {
               left: 0,
               right: 0,
               child: CardEnterprise(),
-            ),
-            Positioned(
-              top: _height * .20,
-              left: 0,
-              right: 0,
-              child: CardResponsible(),
-            ),
+            )
           ],
         ),
       ),

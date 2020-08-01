@@ -1,3 +1,6 @@
+import 'package:app_sintec/app/shared/auth/repositories/auth_repository.dart';
+import 'package:app_sintec/app/shared/auth/repositories/auth_repository_interface.dart';
+
 import 'repositories/login_repository.dart';
 import 'repositories/interfaces/login_repository_interface.dart';
 import 'login_controller.dart';

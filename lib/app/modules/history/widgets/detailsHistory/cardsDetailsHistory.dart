@@ -156,7 +156,7 @@ class CardResponsible extends StatelessWidget {
     double _width = MediaQuery.of(context).size.width;
     double _height = MediaQuery.of(context).size.height;
     return Container(
-        width: _width,
+        width: _width / 5,
         height: _height / 5,
         decoration: BoxDecoration(
           color: Colors.blueAccent,
