@@ -1,3 +1,4 @@
+import 'package:app_sintec/app/modules/history/widgets/covid/covid_page.dart';
 import 'package:app_sintec/app/modules/history/widgets/customBar.dart';
 import 'package:app_sintec/app/modules/history/widgets/detailsHistory/detailsHistory.dart';
 import 'package:app_sintec/app/modules/history/widgets/listView.dart';
@@ -43,7 +44,6 @@ class _HistoryPageState extends ModularState<HistoryPage, HistoryController>
     double _screenHeight = MediaQuery.of(context).size.height;
     double _screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.transparent,
       body: PageView(
         controller: _pageController,
         onPageChanged: (index) {
@@ -113,9 +113,7 @@ class _HistoryPageState extends ModularState<HistoryPage, HistoryController>
             ),
           ),
           DetailsHistory(),
-          Container(
-            color: Colors.orange,
-          ),
+          CovidPage(),
           ProfilePage()
         ],
       ),
@@ -151,11 +149,11 @@ class _HistoryPageState extends ModularState<HistoryPage, HistoryController>
           ),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.notifications,
+                Icons.data_usage,
                 color: Colors.grey,
               ),
               title: Text(
-                'Notificações',
+                'API',
                 style: TextStyle(
                   color: Colors.grey,
                 ),

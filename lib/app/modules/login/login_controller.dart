@@ -1,4 +1,4 @@
-import 'package:app_sintec/app/shared/auth/repositories/auth_repository_interface.dart';
+import 'package:app_sintec/app/shared/auth/auth_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
@@ -13,4 +13,10 @@ abstract class _LoginControllerBase with Store {
 
   @observable
   TextEditingController password = TextEditingController();
+
+  @observable
+  bool loading = false;
+
+  @action
+  void loginWithGoogle() {}
 }

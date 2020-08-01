@@ -20,10 +20,11 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-        seconds: 1,
+        seconds: 3,
         gradientBackground: customTheme(),
         navigateAfterSeconds: IntroSlides(),
-        loaderColor: Color(0xff7159c1),
+        loaderColor: Colors.white,
+        photoSize: 60,
         image: Image.asset(
           'assets/icons/drone.png',
         ));
@@ -34,9 +35,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.purple,
-      ),
+      body: Container(),
     );
   }
 }

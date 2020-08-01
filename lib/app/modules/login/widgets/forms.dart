@@ -1,6 +1,6 @@
 import 'package:app_sintec/app/modules/login/login_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
+
 import 'package:flutter_modular/flutter_modular.dart';
 
 class FormCustomLogin extends StatefulWidget {
@@ -27,30 +27,27 @@ class _FormCustomLoginState
           height: MediaQuery.of(context).size.height / 3,
           child: Column(
             children: [
-              Expanded(child: Observer(
-                builder: (_) {
-                  return TextField(
-                    controller: controller.email,
-                    keyboardType: TextInputType.text,
-                    cursorColor: Colors.white,
-                    style: TextStyle(color: Colors.white),
-                    decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white, width: 1),
-                        ),
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white, width: 1),
-                        ),
-                        hintText: 'Email',
-                        hintStyle: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
-                        prefixIcon: Icon(
-                          Icons.email,
-                          size: 24,
-                          color: Colors.white,
-                        )),
-                  );
-                },
+              Expanded(
+                  child: TextField(
+                controller: controller.email,
+                keyboardType: TextInputType.text,
+                cursorColor: Colors.white,
+                style: TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white, width: 1),
+                    ),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white, width: 1),
+                    ),
+                    hintText: 'Email',
+                    hintStyle: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                    prefixIcon: Icon(
+                      Icons.email,
+                      size: 24,
+                      color: Colors.white,
+                    )),
               )),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -66,32 +63,29 @@ class _FormCustomLoginState
                 height: 10,
               ),
               Expanded(
-                child: Observer(builder: (_) {
-                  return TextField(
-                    controller: controller.password,
-                    keyboardType: TextInputType.text,
-                    cursorColor: Colors.white,
-                    style: TextStyle(color: Colors.white),
-                    decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white, width: 1),
-                        ),
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white, width: 1),
-                        ),
-                        hintText: 'Password',
-                        hintStyle: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        prefixIcon: Icon(
-                          Icons.lock,
-                          size: 24,
-                          color: Colors.white,
-                        )),
-                  );
-                }),
-              ),
+                  child: TextField(
+                controller: controller.password,
+                keyboardType: TextInputType.text,
+                cursorColor: Colors.white,
+                style: TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white, width: 1),
+                    ),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white, width: 1),
+                    ),
+                    hintText: 'Password',
+                    hintStyle: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.lock,
+                      size: 24,
+                      color: Colors.white,
+                    )),
+              )),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [

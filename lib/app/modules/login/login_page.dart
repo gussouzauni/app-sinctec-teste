@@ -1,4 +1,5 @@
 import 'package:app_sintec/app/modules/login/widgets/button.dart';
+import 'package:app_sintec/app/modules/login/widgets/buttonGoogle.dart';
 import 'package:app_sintec/app/modules/login/widgets/forms.dart';
 import 'package:app_sintec/app/modules/login/widgets/header.dart';
 import 'package:app_sintec/app/shared/utils/theme.dart';
@@ -23,6 +24,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
       backgroundColor: Colors.transparent,
       body: Container(
         width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(gradient: customTheme()),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -30,9 +32,13 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
           children: <Widget>[
             HeaderCustomLogin(),
             FormCustomLogin(),
-            ButtonLogin(),
+            ButtonGoogle(),
             SizedBox(
-              height: 20,
+              height: 10,
+            ),
+            Flexible(child: ButtonLogin()),
+            SizedBox(
+              height: 10,
             ),
             RichText(
               text: TextSpan(children: <TextSpan>[
