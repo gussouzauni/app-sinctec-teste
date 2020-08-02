@@ -50,7 +50,7 @@ class AppBarCustomProfile extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 15,
+            width: _screenWidth * .2,
           ),
           Icon(
             Icons.arrow_forward_ios,

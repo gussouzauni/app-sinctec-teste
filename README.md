@@ -1,16 +1,33 @@
-# app_sintec
+<h1 align="center">App - Sinctec</h1>
+  
+<p>Protótipo de um aplicativo</p>
 
-A new Flutter project.
+```Bibliotecas utilizadas no desenvolvimento do app:
+  camera
+  google_sign_in
+  http
+  firebase_auth
+  firebase_core
+  tabbar
+  intro_slider
+  flutter_svg
+  dio
+  flutter_mobx
+  mobx
+  flutter_modular
+```
 
-## Getting Started
+```Observações
+ - O escopo do projeto foi deixado em aberto, sendo assim, tomei como premissa escolhas de cores, paletas e imagens de minha preferência, bem como, a mudança de algumas telas para facilitar o desenvolvimento.
+ * Alguns requisitos foram atendidos, bem como algumas implementações pedidas
+ * O tempo de desenvolvimento foi de 4 dias, a contar a partir do dia de alimentação do repositório, sendo assim, programando algumas horas apenas por dia.
+```
 
-This project is a starting point for a Flutter application.
+<p align="center">
+  <img src="">
+  <img src="">
+</p>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```Sobre o aplicativo
+  - Aplicativo funcional, aplicando alguns conceitos de estruturação de projetos, clean code, modularização, controle de estado.
+```

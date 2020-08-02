@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'home_controller.dart';
 
-import 'package:splashscreen/splashscreen.dart';
-
 class HomePage extends StatefulWidget {
   final String title;
   const HomePage({Key key, this.title = "Home"}) : super(key: key);

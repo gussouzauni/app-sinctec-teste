@@ -41,7 +41,7 @@ class _IntroSlidesState extends State<IntroSlides> {
   }
 
   void onDonePress() {
-    // Do what you want
+    Navigator.pop(context);
     Modular.to.pushNamed('/login');
   }
 
@@ -69,13 +69,13 @@ class _IntroSlidesState extends State<IntroSlides> {
 
   @override
   Widget build(BuildContext context) {
-    return new IntroSlider(
+    return IntroSlider(
       // List slides
       slides: this.slides,
 
       // Skip button
       renderSkipBtn: this.renderSkipBtn(),
-      colorSkipBtn: Color(0x33000000),
+      colorSkipBtn: Colors.white,
       highlightColorSkipBtn: Color(0xff000000),
 
       // Next button

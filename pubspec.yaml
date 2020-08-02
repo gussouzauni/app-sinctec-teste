@@ -17,7 +17,6 @@ dependencies:
   tabbar: ^0.0.3
   intro_slider: ^2.3.1
   flutter_svg: ^0.17.0
-  splashscreen: ^1.2.0
   dio: ^3.0.9
   flutter_mobx: ^1.1.0+1
   mobx: ^1.2.1+1
@@ -40,6 +39,7 @@ flutter:
     - assets/icons/drone.png
     - assets/icons/photo.png
     - assets/icons/google.png
+    - assets/icons/sinctec.png
     - assets/icons/maps.jpg
 vars:
   clean: flutter clean

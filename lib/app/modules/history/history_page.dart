@@ -103,7 +103,21 @@ class _HistoryPageState extends ModularState<HistoryPage, HistoryController>
                             Container(
                               width: _screenWidth,
                               height: _screenHeight,
-                              color: Colors.purple,
+                              color: Colors.white,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.asset(
+                                    'assets/icons/sinctec.png',
+                                    width: 120,
+                                    height: 120,
+                                  ),
+                                  SizedBox(
+                                    height: 40,
+                                  ),
+                                  CircularProgressIndicator(),
+                                ],
+                              ),
                             )
                           ],
                         ),
