@@ -24,8 +24,15 @@
 ```
 
 <p align="center">
-  <img src="">
-  <img src="">
+  <img width="420" height="820" src="https://github.com/gussouzauni/app-sinctec/blob/master/screenshots/screen.png" >
+  <img width="420" height="820" src="https://github.com/gussouzauni/app-sinctec/blob/master/screenshots/screen1.png">
+   <img width="420" height="820" src="https://github.com/gussouzauni/app-sinctec/blob/master/screenshots/screen2.png">
+  <img width="420" height="820" src="https://github.com/gussouzauni/app-sinctec/blob/master/screenshots/screen3.png">
+   <img width="420" height="820" src="https://github.com/gussouzauni/app-sinctec/blob/master/screenshots/screen4.png">
+  <img width="420" height="820" src="https://github.com/gussouzauni/app-sinctec/blob/master/screenshots/screen5.png">
+   <img width="420" height="820" src="https://github.com/gussouzauni/app-sinctec/blob/master/screenshots/screen6.png">
+  <img width="420" height="820" src="https://github.com/gussouzauni/app-sinctec/blob/master/screenshots/screen7.png">
+  <img width="420" height="820" src="https://github.com/gussouzauni/app-sinctec/blob/master/screenshots/screen8.png">
 </p>
 
 ```Sobre o aplicativo
