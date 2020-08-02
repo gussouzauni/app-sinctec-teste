@@ -24,7 +24,6 @@
 ```
 
 <p align="center">
-  <p>Tela 1</p>
   <img width="420" height="820" src="https://github.com/gussouzauni/app-sinctec/blob/master/screenshots/screen.png" >
   <img width="420" height="820" src="https://github.com/gussouzauni/app-sinctec/blob/master/screenshots/screen1.png">
    <img width="420" height="820" src="https://github.com/gussouzauni/app-sinctec/blob/master/screenshots/screen2.png">
