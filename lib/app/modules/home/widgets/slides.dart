@@ -27,7 +27,6 @@ class _IntroSlidesState extends State<IntroSlides> {
             fontWeight: FontWeight.bold,
             fontFamily: 'RobotoMono'),
         colorBegin: Color(0xff7159c1),
-        colorEnd: Colors.white,
         directionColorBegin: Alignment.topLeft,
         directionColorEnd: Alignment.bottomRight,
         centerWidget:
@@ -49,7 +48,7 @@ class _IntroSlidesState extends State<IntroSlides> {
   Widget renderNextBtn() {
     return Icon(
       Icons.navigate_next,
-      color: Color(0xffD02090),
+      color: Colors.white,
       size: 35.0,
     );
   }
@@ -57,7 +56,7 @@ class _IntroSlidesState extends State<IntroSlides> {
   Widget renderDoneBtn() {
     return Icon(
       Icons.done,
-      color: Color(0xffD02090),
+      color: Colors.purple,
     );
   }
 
@@ -86,7 +85,7 @@ class _IntroSlidesState extends State<IntroSlides> {
       renderDoneBtn: this.renderDoneBtn(),
       onDonePress: this.onDonePress,
       colorDoneBtn: Color(0x33000000),
-      highlightColorDoneBtn: Color(0xff000000),
+      highlightColorDoneBtn: Colors.white,
 
       // Dot indicator
       colorDot: Color(0x33D02090),
@@ -94,8 +93,8 @@ class _IntroSlidesState extends State<IntroSlides> {
       sizeDot: 13.0,
 
       // Show or hide status bar
+
       shouldHideStatusBar: true,
-      backgroundColorAllSlides: Colors.white,
     );
   }
 }

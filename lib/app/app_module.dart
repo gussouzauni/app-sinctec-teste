@@ -1,3 +1,5 @@
+import 'package:app_sintec/app/modules/home/home_controller.dart';
+
 import 'modules/profile/services/service_profile.dart';
 import 'package:app_sintec/app/modules/history/history_module.dart';
 import 'package:app_sintec/app/modules/login/login_module.dart';
@@ -20,7 +22,7 @@ class AppModule extends MainModule {
         Bind((i) => AppController()),
         Bind((i) => ProfileController()),
         Bind<IAuthRepository>((i) => AuthRepository()),
-        Bind((i) => AuthController())
+        Bind((i) => AuthController()),
       ];
 
   @override

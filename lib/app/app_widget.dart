@@ -8,10 +8,6 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       navigatorKey: Modular.navigatorKey,
       title: 'Flutter',
-      theme: ThemeData(
-        primaryColor: Colors.white,
-      ),
-      initialRoute: '/',
       onGenerateRoute: Modular.generateRoute,
     );
   }

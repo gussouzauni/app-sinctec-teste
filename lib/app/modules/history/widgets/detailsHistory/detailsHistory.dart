@@ -1,4 +1,4 @@
-import 'package:app_sintec/app/modules/history/widgets/detailsHistory/cardsDetailsHistory.dart';
+import 'package:app_sintec/app/modules/history/widgets/detailsHistory/cardDetailsHistory.dart';
 import 'package:app_sintec/app/modules/history/widgets/detailsHistory/customBarDetails.dart';
 import 'package:flutter/material.dart';
 

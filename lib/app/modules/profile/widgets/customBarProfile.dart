@@ -6,6 +6,7 @@ class AppBarCustomProfile extends StatelessWidget {
     double _screenHeight = MediaQuery.of(context).size.height;
     double _screenWidth = MediaQuery.of(context).size.width;
     return Container(
+      width: _screenWidth,
       decoration: BoxDecoration(
           color: Colors.blueAccent,
           borderRadius: BorderRadius.only(
@@ -49,12 +50,12 @@ class AppBarCustomProfile extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: _screenWidth / 5,
+            width: 15,
           ),
           Icon(
             Icons.arrow_forward_ios,
             color: Colors.white,
-          )
+          ),
         ],
       ),
     );

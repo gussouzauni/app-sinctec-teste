@@ -1,3 +1,4 @@
+import 'package:app_sintec/app/modules/history/widgets/bottomNav.dart';
 import 'package:app_sintec/app/modules/history/widgets/covid/covid_page.dart';
 import 'package:app_sintec/app/modules/history/widgets/customBar.dart';
 import 'package:app_sintec/app/modules/history/widgets/detailsHistory/detailsHistory.dart';
@@ -44,134 +45,80 @@ class _HistoryPageState extends ModularState<HistoryPage, HistoryController>
     double _screenHeight = MediaQuery.of(context).size.height;
     double _screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: PageView(
-        controller: _pageController,
-        onPageChanged: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        children: [
-          Container(
-            width: _screenWidth,
-            height: _screenHeight,
-            decoration: BoxDecoration(gradient: customTheme()),
-            child: Container(
-              height: _screenHeight / 1.0,
-              child: Stack(
-                overflow: Overflow.visible,
-                children: [
-                  Positioned(
-                    top: 0,
-                    child: CustomAppBar(),
-                  ),
-                  Positioned(
-                    top: _screenHeight * .110,
-                    left: _screenWidth * .25,
-                    child: TabBar(
-                      labelColor: Colors.white,
-                      indicatorColor: Colors.white,
-                      isScrollable: true,
-                      controller: _tabController,
-                      tabs: <Widget>[
-                        Tab(
-                          text: 'Pendentes',
-                        ),
-                        Tab(
-                          text: 'Realizadas',
-                        ),
-                      ],
+        body: PageView(
+          controller: _pageController,
+          onPageChanged: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          children: [
+            Container(
+              width: _screenWidth,
+              height: _screenHeight,
+              decoration: BoxDecoration(gradient: customTheme()),
+              child: Container(
+                height: _screenHeight / 1.0,
+                child: Stack(
+                  overflow: Overflow.visible,
+                  children: [
+                    Positioned(
+                      top: 0,
+                      child: CustomAppBar(),
                     ),
-                  ),
-                  Positioned(
-                    top: _screenHeight * .22,
-                    left: 10,
-                    right: 10,
-                    child: SearchCustom(),
-                  ),
-                  Positioned(
-                    top: _screenHeight * .30,
-                    left: 0,
-                    right: 0,
-                    child: SizedBox(
-                      height: _screenHeight,
-                      child: TabBarView(
+                    Positioned(
+                      top: _screenHeight * .110,
+                      left: _screenWidth * .25,
+                      child: TabBar(
+                        labelColor: Colors.white,
+                        indicatorColor: Colors.white,
+                        isScrollable: true,
                         controller: _tabController,
-                        children: <Widget>[
-                          ListViewCustom(),
-                          Container(
-                            width: _screenWidth,
-                            height: _screenHeight,
-                            color: Colors.purple,
-                          )
+                        tabs: <Widget>[
+                          Tab(
+                            text: 'Pendentes',
+                          ),
+                          Tab(
+                            text: 'Realizadas',
+                          ),
                         ],
                       ),
                     ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          DetailsHistory(),
-          CovidPage(),
-          ProfilePage()
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        onTap: onBottomTapped,
-        currentIndex: _currentIndex,
-        items: [
-          BottomNavigationBarItem(
-            icon: new Icon(
-              Icons.home,
-              color: Colors.grey,
-            ),
-            title: new Text(
-              'Início',
-              style: TextStyle(
-                color: Colors.grey,
-              ),
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: new Icon(
-              Icons.card_travel,
-              color: Colors.grey,
-            ),
-            title: new Text(
-              'Viagens',
-              style: TextStyle(
-                color: Colors.grey,
-              ),
-            ),
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.data_usage,
-                color: Colors.grey,
-              ),
-              title: Text(
-                'API',
-                style: TextStyle(
-                  color: Colors.grey,
+                    Positioned(
+                      top: _screenHeight * .22,
+                      left: 10,
+                      right: 10,
+                      child: SearchCustom(),
+                    ),
+                    Positioned(
+                      top: _screenHeight * .30,
+                      left: 0,
+                      right: 0,
+                      child: SizedBox(
+                        height: _screenHeight,
+                        child: TabBarView(
+                          controller: _tabController,
+                          children: <Widget>[
+                            ListViewCustom(),
+                            Container(
+                              width: _screenWidth,
+                              height: _screenHeight,
+                              color: Colors.purple,
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
                 ),
-              )),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.dashboard,
-                color: Colors.grey,
               ),
-              title: Text(
-                'Mais',
-                style: TextStyle(
-                  color: Colors.grey,
-                ),
-              ))
-        ],
-      ),
-    );
+            ),
+            DetailsHistory(),
+            CovidPage(),
+            ProfilePage()
+          ],
+        ),
+        bottomNavigationBar: bottomNav(onBottomTapped, _currentIndex));
   }
 
   void onBottomTapped(int index) {

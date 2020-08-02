@@ -23,7 +23,7 @@ class CustomBarDetails extends StatelessWidget {
                 color: Colors.white,
               )),
           SizedBox(
-            width: _width / 5.5,
+            width: _width / 6,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,

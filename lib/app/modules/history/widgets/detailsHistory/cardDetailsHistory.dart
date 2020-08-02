@@ -9,7 +9,7 @@ class CardEnterprise extends StatelessWidget {
       padding: const EdgeInsets.all(15.0),
       child: Container(
         width: _width,
-        height: _height / 2,
+        height: _height / 1.5,
         decoration: BoxDecoration(
           color: Colors.blueAccent,
           borderRadius: BorderRadius.circular(30.0),
@@ -125,8 +125,8 @@ class CardEnterprise extends StatelessWidget {
                               height: 10,
                             ),
                             Container(
-                              width: _width / 1.5,
-                              height: 130,
+                              width: _width / 2,
+                              height: _height / 6,
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   shape: BoxShape.circle,
@@ -162,12 +162,5 @@ class CardResponsible extends StatelessWidget {
           color: Colors.blueAccent,
           borderRadius: BorderRadius.circular(30.0),
         ));
-  }
-}
-
-class CardShipping extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
