@@ -1,4 +1,4 @@
-<h1 align="center">App - Sinctec</h1>
+<h1 align="center">Sinctec</h1>
   
 <p>Protótipo de um aplicativo</p>
 
@@ -17,11 +17,6 @@
   flutter_modular
 ```
 
-```Observações
- - O escopo do projeto foi deixado em aberto, sendo assim, tomei como premissa escolhas de cores, paletas e imagens de minha preferência, bem como, a mudança de algumas telas para facilitar o desenvolvimento.
- - Alguns requisitos foram atendidos, bem como algumas implementações pedidas
- - O tempo de desenvolvimento foi de 5 dias, a contar a partir do dia de alimentação do repositório, sendo assim, programando algumas horas apenas por dia.
-```
 
 <p align="center">
   <img width="420" height="820" src="https://github.com/gussouzauni/app-sinctec/blob/master/screenshots/screen.png" >
