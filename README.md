@@ -1,4 +1,4 @@
-<h1 align="center">Sinctec</h1>
+<h1 align="center">Sinctec - Teste</h1>
   
 <p>Protótipo de um aplicativo</p>
 
@@ -31,5 +31,5 @@
 </p>
 
 ```Sobre o aplicativo
-  - Aplicativo funcional, aplicando alguns conceitos de estruturação de projetos, clean code, modularização, controle de estado.
+  - Aplicativo funcional, aplicando alguns conceitos de estruturação de projetos, clean code, modularização, controle de estado e utilizando bibliotecas para criação de Widgets.
 ```
